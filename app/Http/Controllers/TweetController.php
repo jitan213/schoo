@@ -17,7 +17,11 @@ class TweetController extends Controller
      */
     public function index()
     {
-        return view('tweet.index');
+        $tweets = Tweet::all();
+
+        return view('tweet.index', [
+            'tweets' => $tweets,
+        ]);
     }
 
     /**
