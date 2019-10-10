@@ -16,7 +16,7 @@ class TweetController extends Controller
      */
     public function index()
     {
-        return "まだコントローラーだけです";
+        return view('tweet.index');
     }
 
     /**
