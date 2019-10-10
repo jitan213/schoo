@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 Route::get('/tweets', "TweetController@index");
 Route::get('/tweets/create', "TweetController@create");
+Route::post('/tweets', "TweetController@store");
