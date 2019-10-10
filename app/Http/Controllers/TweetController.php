@@ -59,10 +59,12 @@ class TweetController extends Controller
     {
         $tweet = Tweet::find($id);
 
-        return view('tweet.show',[
-            'tweet' => $tweet
+        return view('tweet.show', [
+            'tweet' => $tweet,
         ]);
 
+
+    }
     /**
      * Show the form for editing the specified resource.
      *
