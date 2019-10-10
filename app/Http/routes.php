@@ -18,3 +18,4 @@ Route::get('/', function () {
 Route::get('/tweets', "TweetController@index");
 Route::get('/tweets/create', "TweetController@create");
 Route::post('/tweets', "TweetController@store");
+Route::get('/tweets/{id}',"TweetController@show");
