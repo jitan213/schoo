@@ -17,10 +17,12 @@
         <div class="col-md-10">
             <table class="table">
                 <tbody>
+                    @foreach($tweets as $tweet)
                     <tr>
-                        <td>ビューからHTMLを生成して返しました</td>
+                        <td>{{ $tweet->body }}</td>
                         <td class="text-right"></td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
