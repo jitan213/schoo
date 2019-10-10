@@ -15,3 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/tweets', "TweetController@index");
+Route::get('/tweets/create', "TweetController@create");
