@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form action="" method="post">
+            <form action="/tweets" method="post">
                 {!! csrf_field() !!}
 
                 <div class="form-group row">
