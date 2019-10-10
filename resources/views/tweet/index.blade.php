@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <div class="col-md-2">
-            <a class="btn btn-primary" href="">ツイート新規投稿</a>
+            <a class="btn btn-primary" href="/tweets/create">ツイート新規投稿</a>
         </div>
         <div class="col-md-10">
             <table class="table">
