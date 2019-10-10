@@ -20,7 +20,7 @@
                     @foreach($tweets as $tweet)
                     <tr>
                         <td>{{ $tweet->body }}</td>
-                        <td class="text-right"></td>
+                        <td class="text-right"><a href="/tweets/{{ $tweet->id }}">詳細</a></td>
                     </tr>
                     @endforeach
                 </tbody>
