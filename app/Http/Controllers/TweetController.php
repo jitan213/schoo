@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Tweet;
 
 class TweetController extends Controller
 {
@@ -37,7 +38,11 @@ class TweetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $tweet = new Tweet;
+        $tweet->body = $request->input('body');
+        $tweet->save();
+
+        return redirect('/tweets');
     }
 
     /**
