@@ -104,6 +104,9 @@ class TweetController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $tweet = Tweet::find($id);
+        $tweet->delete();
+
+        return redirect('/tweets');
     }
 }

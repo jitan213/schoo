@@ -19,7 +19,7 @@
         </div>
     </div>
     <a href="/tweets/{{ $tweet->id }}/edit" class="btn btn-primary">更新</a>
-    <form action="" method="post">
+    <form action="/tweets/{{ $tweet->id }}" method="post">
         <input type="hidden" name="_method" value="DELETE">
         {!! csrf_field() !!}
         <button type="submit" class="btn btn-danger">削除</button>
