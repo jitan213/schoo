@@ -42,9 +42,15 @@ class TweetController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+            'body' => ['required','string','max:255'],
+            'hash_tags' => ['string','max:255']
+        ]);
         $tweet = new Tweet;
         $tweet->body = $request->input('body');
         $tweet->save();
+
+        $request->session()->flash('flash_message','ツイートの新規投稿が完了しました！');
 
         return redirect('/tweets');
     }
