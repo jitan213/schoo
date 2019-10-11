@@ -73,7 +73,11 @@ class TweetController extends Controller
      */
     public function edit($id)
     {
-        //
+        $tweet = Tweet::find($id);
+        
+        return view('tweet.edit', [
+            'tweet' => $tweet,
+        ]);
     }
 
     /**
