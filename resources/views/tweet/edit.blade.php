@@ -12,7 +12,8 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <form action="" method="post">
+            <form action="/tweets/{{ $tweet->id }}" method="post">
+                <input type="hidden" name="_method" value="PUT">
                 {!! csrf_field() !!}
 
                 <div class="form-group row">
