@@ -18,7 +18,7 @@
             <p>{{ $tweet->created_at }}</p>
         </div>
     </div>
-    <a href="" class="btn btn-primary">更新</a>
+    <a href="/tweets/{{ $tweet->id }}/edit" class="btn btn-primary">更新</a>
     <form action="" method="post">
         <input type="hidden" name="_method" value="DELETE">
         {!! csrf_field() !!}
