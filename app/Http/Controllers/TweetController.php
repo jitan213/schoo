@@ -89,7 +89,11 @@ class TweetController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tweet = Tweet::find($id);
+        $tweet->body = $request->input('body');
+        $tweet->save();
+
+        return redirect('/tweets');
     }
 
     /**
