@@ -15,7 +15,7 @@
                 </ul>
             </div>
         @endif
-        <form action="/tweets" method="post">
+        <form action={{ route('tweets.store') }} method="post">
             {!! csrf_field() !!}
 
             <div class="form-group row">

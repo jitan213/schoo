@@ -11,8 +11,8 @@
         <h3>投稿日時</h3>
         <p>{{ $tweet->created_at }}</p>
     </div>
-    <a href="/tweets/{{ $tweet->id }}/edit" class="btn btn-primary">更新</a>
-    <form action="/tweets/{{ $tweet->id }}" method="post">
+    <a href={{ route('tweets.edit',['id' => $tweet->id]) }} class="btn btn-primary">更新</a>
+    <form action={{ route('tweets.destroy',['id' => $tweet->id]) }} method="post">
         <input type="hidden" name="_method" value="DELETE">
         {!! csrf_field() !!}
         <button type="submit" class="btn btn-danger">削除</button>

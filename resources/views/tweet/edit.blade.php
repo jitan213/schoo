@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="col-md-12">
-        <form action="/tweets/{{ $tweet->id }}" method="post">
+        <form action={{ route('tweets.update',['id' => $tweet->id]) }} method="post">
             <input type="hidden" name="_method" value="PUT">
             {!! csrf_field() !!}
 

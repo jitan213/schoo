@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="col-md-2">
-        <a class="btn btn-primary" href="/tweets/create">ツイート新規投稿</a>
+        <a class="btn btn-primary" href={{ route('tweets.create') }}>ツイート新規投稿</a>
     </div>
     <div class="col-md-10">
         @if(Session::has('flash_message'))
@@ -19,7 +19,7 @@
                 @foreach($tweets as $tweet)
                 <tr>
                     <td>{{ $tweet->body }}</td>
-                    <td class="text-right"><a href="/tweets/{{ $tweet->id }}">詳細</a></td>
+                    <td class="text-right"><a href={{ route('tweets.show',['id' => $tweet->id]) }}>詳細</a></td>
                 </tr>
                 @endforeach
             </tbody>
