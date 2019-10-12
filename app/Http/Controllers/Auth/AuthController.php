@@ -31,6 +31,16 @@ class AuthController extends Controller
     public function __construct()
     {
         $this->middleware('guest', ['except' => 'getLogout']);
+
+        // routes.phpでこのAuthControllerが呼ばれたらconstructだからこのメソッドが絶対呼ばれる
+        //ログイン、ログアウト、新規登録した後にどの画面に飛ぶかを書いている
+        //redirectPathというプロパティにtweets.indexというツイート一覧画面のURLを渡してあげて、ユーザーが作成されたあとはツイート一覧画面へリダレクト
+        $this->redirectPath = route('tweets.index');
+        //ログインされたあとはツイート一覧画面へリダイレクト
+        $this->loginPath = route('tweets.index');
+        //ログアウトしたあとはログイン画面へリダイレクト
+        $this->redirectAfterLogout = route('auth.getLogin');
+
     }
 
     /**
