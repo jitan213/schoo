@@ -22,3 +22,12 @@ Route::get('/tweets/{id}',"TweetController@show")->name('tweets.show');
 Route::get('/tweets/{id}/edit', "TweetController@edit")->name('tweets.edit');
 Route::put('/tweets/{id}',"TweetController@update")->name('tweets.update');
 Route::delete('/tweets/{id}',"TweetController@destroy")->name('tweets.destroy');
+
+// 認証のルート定義…
+Route::get('auth/login', 'Auth\AuthController@getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout');
+
+// 登録のルート定義…
+Route::get('auth/register', 'Auth\AuthController@getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister');
