@@ -7,12 +7,32 @@
 </head>
 <body>
 <div class="container">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="{{ route('tweets.index') }}" class="navbar-brand">マイアプリ</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                @if(Auth::check())
+                    <li>
+                        <a href="{{ route('auth.getLogout') }}">ログアウト</a>
+                    </li>
+                @else
+                    <li>
+                        <a href="{{ route('auth.getRegister') }}">ユーザ新規登録</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('auth.getLogin') }}">ログイン</a>
+                    </li>
+                @endif
+            </ul>
+        </div>
+    </nav>
+
     <div class="page-header">
         <h1>@yield('page-title')</h1>
     </div>
-    <div class="row">
-        @yield('content')
-    </div>
+    @yield('content')
 </div>
 </body>
 </html>
