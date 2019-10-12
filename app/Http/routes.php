@@ -24,10 +24,10 @@ Route::put('/tweets/{id}',"TweetController@update")->name('tweets.update');
 Route::delete('/tweets/{id}',"TweetController@destroy")->name('tweets.destroy');
 
 // 認証のルート定義…
-Route::get('auth/login', 'Auth\AuthController@getLogin');
-Route::post('auth/login', 'Auth\AuthController@postLogin');
-Route::get('auth/logout', 'Auth\AuthController@getLogout');
+Route::get('auth/login', 'Auth\AuthController@getLogin')->name('auth.getLogin');
+Route::post('auth/login', 'Auth\AuthController@postLogin')->name('auth.postLogin');
+Route::get('auth/logout', 'Auth\AuthController@getLogout')->name('auth.getLogout');
 
 // 登録のルート定義…
-Route::get('auth/register', 'Auth\AuthController@getRegister');
-Route::post('auth/register', 'Auth\AuthController@postRegister');
+Route::get('auth/register', 'Auth\AuthController@getRegister')->name('auth.getRegister');
+Route::post('auth/register', 'Auth\AuthController@postRegister')->name('auth.postRegister');
