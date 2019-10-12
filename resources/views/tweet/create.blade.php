@@ -21,7 +21,7 @@
             <div class="form-group row">
                 <label class="col-xs-2 col-form-label">ツイート本文</label>
                 <div class="col-xs-10">
-                    <input type="text" name="body" class="form-control" placeholder="ツイート本文を入力してください。"/>
+                    <input type="text" name="body" class="form-control" placeholder="ツイート本文を入力してください。" value="{{ old('body') }}"/>
                 </div>
             </div>
 
