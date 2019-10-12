@@ -105,6 +105,8 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'body' => 'ツイート本文'
+    ],
 
 ];
