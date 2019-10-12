@@ -18,4 +18,3 @@
         <button type="submit" class="btn btn-danger">削除</button>
     </form>
 @endsection
-
