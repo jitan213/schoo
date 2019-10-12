@@ -5,8 +5,11 @@
 @endsection
 
 @section('content')
-<div class="col-md-2">
+    <div class="col-md-2">
+        @if(Auth::check())
+        {{ Auth::user()->name }}
         <a class="btn btn-primary" href={{ route('tweets.create') }}>ツイート新規投稿</a>
+        @endif
     </div>
     <div class="col-md-10">
         @if(Session::has('flash_message'))
