@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tweets', "TweetController@index");
-Route::get('/tweets/create', "TweetController@create");
-Route::post('/tweets', "TweetController@store");
-Route::get('/tweets/{id}',"TweetController@show");
-Route::get('/tweets/{id}/edit', "TweetController@edit");
-Route::put('/tweets/{id}',"TweetController@update");
-Route::delete('/tweets/{id}',"TweetController@destroy");
+Route::get('/tweets', "TweetController@index")->name('tweets.index');
+Route::get('/tweets/create', "TweetController@create")->name('tweets.create');
+Route::post('/tweets', "TweetController@store")->name('tweets.store');
+Route::get('/tweets/{id}',"TweetController@show")->name('tweets.show');
+Route::get('/tweets/{id}/edit', "TweetController@edit")->name('tweets.edit');
+Route::put('/tweets/{id}',"TweetController@update")->name('tweets.update');
+Route::delete('/tweets/{id}',"TweetController@destroy")->name('tweets.destroy');
