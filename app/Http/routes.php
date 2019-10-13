@@ -22,6 +22,7 @@ Route::get('/tweets/{id}',"TweetController@show")->name('tweets.show');
 Route::get('/tweets/{id}/edit', "TweetController@edit")->name('tweets.edit');
 Route::put('/tweets/{id}',"TweetController@update")->name('tweets.update');
 Route::delete('/tweets/{id}',"TweetController@destroy")->name('tweets.destroy');
+Route::get('/user/{id}/profile', 'UserProfileController@show');
 
 // 認証のルート定義…
 Route::get('auth/login', 'Auth\AuthController@getLogin')->name('auth.getLogin');
