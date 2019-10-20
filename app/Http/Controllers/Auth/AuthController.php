@@ -80,6 +80,7 @@ class AuthController extends Controller
         $user_profile->birthday = '1990-01-01';
         //普通は
         //$user_profile->user_id = $user->id;
+        //$user->idはインクリメントのやつ
         //$user_profile->save();
         //こうするけど今回は、
         $user->userProfile()->save($user_profile);
